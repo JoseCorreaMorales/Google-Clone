@@ -34,21 +34,23 @@
             <img src="https://www.google.com/logos/doodles/2022/seasonal-holidays-2022-6753651837109831.7-ladc.gif" alt>
         </section>
 
-        <section class="main-input">
-            <div class="main-input-container">
-                <span class="material-symbols-outlined" style="color: white; margin-left: 15px; margin-right: 5px;">
-                    search
-                </span>
-                <input id name type="text" placeholder="Busca en Google">
-                <a href title="Búsqueda por voz"><img src="/img/microphone.png" alt width="30px"></a>
-            </div>
-        </section>
-
-
-        <section class="main-btn">
-            <div><button>Buscar con Google</button></div>
-            <div><button>Me siento con suerte</button></div>
-        </section>
+        <form id="search-form" action="https://www.google.com/search" method="get" target="_blank">
+            <section class="main-input">
+                <div class="main-input-container">
+                    <span class="material-symbols-outlined" style="color: white; margin-left: 15px; margin-right: 5px;">
+                        search
+                    </span>
+                    <input name="q" type="search" placeholder="Busca en Google">
+                    <a href title="Búsqueda por voz"><img src="/img/microphone.png" alt width="30px"></a>
+                </div>
+            </section>
+    
+    
+            <section class="main-btn">
+                <div><button type="submit">Buscar con Google</button></div>
+                <div><button>Me siento con suerte</button></div>
+            </section>
+        </form>
 
     </main>
 

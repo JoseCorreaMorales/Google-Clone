@@ -90,6 +90,7 @@ main .main-input input {
     border: none;
     outline: none;
     background-color: transparent;
+    color: white;
 }
 
 main .main-input-container:hover {
