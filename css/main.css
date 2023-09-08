@@ -4,6 +4,8 @@ body {
     box-sizing: border-box;
     background-color: rgba(0, 0, 0, 0.873);
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+
 }
 
 
@@ -53,7 +55,7 @@ nav .nav-right-section img:hover {
 
 /* ------------------------------------------------------MAIN SECTION------------------------------------------------------------- */
 main {
-    margin-top: 2rem;
+    margin-top: 3rem;
     text-align: center;
 }
 
@@ -62,14 +64,18 @@ main {
 }
 
 
+
+
 main .main-input {
     width: 565px;
+    /* 565 */
     margin: 0 auto;
     margin-bottom: 2.5rem;
 }
 
 main .main-input-container {
     width: 560px;
+    /* 560 -5 */
     border-radius: 100px;
     outline: 1px solid rgba(255, 255, 255, 0.475);
     display: flex;
@@ -79,6 +85,7 @@ main .main-input-container {
 
 main .main-input input {
     width: 555px;
+    /* 555 -5 */
     height: 40px;
     border: none;
     outline: none;
@@ -93,7 +100,7 @@ main .main-input-container:hover {
     background-color: rgba(173, 173, 176, 0.168);
 }
 
-main .main-input-container{
+main .main-input-container {
     background-color: transparent;
 }
 
@@ -103,11 +110,16 @@ main .main-input-container{
 
 main .main-btn {
     width: 530px;
+    /* 530 '-15 */
     margin: 0 auto;
 }
 
 .main-btn div {
     display: inline-block;
+}
+
+.main-btn div button {
+    cursor: pointer;
 }
 
 .main-btn button {
@@ -130,20 +142,22 @@ main .main-btn {
 /* ------------------------------------------------------------FOOTER SECTION------------------------------------------ */
 
 footer {
-    height: 15%;
-    width: 100vw;
+    /*  height: 15%; */
+    width: 100%;
     color: black;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     background-color: #171717;
     color: rgb(180, 180, 180);
     font-size: .9rem;
+
+
 }
 
-.footer-links{
-    margin-left: 2rem;
-    margin-right:2rem;
-    margin-top: 1rem;
+.footer-links {
+    margin: 1rem 2rem 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 footer .footer-links a {
@@ -166,7 +180,82 @@ footer .footer-links a:hover {
     border-bottom: 1px solid #5a5b5f;
 }
 
-.footer-links {
-    display: flex;
-    justify-content: space-between;
+
+@media (max-width: 800px) {
+    .footer-links {
+        margin: 1rem .5rem;
+        flex-direction: column;
+    }
+
+
+    .footer-links div {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .footer-links--left {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    main .main-input {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 2.5rem;
+    }
+
+    main .main-input-container {
+        width: 100%;
+        border-radius: 100px;
+        outline: 1px solid rgba(255, 255, 255, 0.475);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main .main-input input {
+        width: 80%;
+        height: 40px;
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+
+
+    main .main-btn {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+
+    .main-logo img {
+        width: 85%;
+        height: auto;
+    }
+
+    main .main-btn {
+        width: 100%;
+        /* 530 '-15 */
+        margin: 0 auto;
+    }
+
+    .main-btn button {
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+}
+
+@media (max-width: 480px) {
+
+
+
+    .footer-links div {
+        flex-direction: column;
+        gap: 1rem;
+    }
 }
